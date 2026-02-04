@@ -1,6 +1,6 @@
 {
     "name": "Juego Impostor",
-    "description": "",
+    "description": "Extension para facilitar la programacion del juego del impostor",
     "dependencies": {
         "core": "*",
         "radio": "*",
