@@ -10,7 +10,7 @@ namespace juegoImpostor {
     export let contador = 0
 
     //% block="Crear juego Impostor con $texto y $jugadores jugadores"
-    export function configurarJuego1(texto: string, jugadores: number): void {
+    export function crearJuego(texto: string, jugadores: number): void {
         // 1. Normalizar: comas → espacios
         texto = texto.replace(",", " ")
         texto = texto.trim()
@@ -42,16 +42,6 @@ namespace juegoImpostor {
         _palabraSorteada = lista[Math.randomRange(0, lista.length - 1)]
     }
 
-    //% block="configurar juego con palabras $lista y $jugadores jugadores"
-    //% lista.shadow="lists_create_with"
-    //% jugadores.defl=3
-    export function configurarJuego(lista: string[], jugadores: number): void {
-        _palabras = lista
-        _cantidadJugadores = jugadores
-        _impostor = Math.randomRange(1, jugadores)
-        _palabraSorteada = lista[Math.randomRange(0, lista.length - 1)]
-        contador = 1
-    }
     //% block="cantidad de jugadores"
     export function cantidadJugadores(): number {
         return _cantidadJugadores
